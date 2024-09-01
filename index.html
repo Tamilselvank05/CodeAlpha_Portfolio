@@ -23,6 +23,18 @@
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript"></script>
+
+
+       <!-- Load EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+
+        
+            
+
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -30,7 +42,7 @@
         <div class="wrapper">
             <div class="sidebar">
                 <div class="sidebar-text d-flex flex-column h-100 justify-content-center text-center">
-                    <img class="w-100 img-fluid mb-4" src="img/profile.jpg" alt="Image">
+                   <img class="w-100 img-fluid mb-4" src="img/profile.jpg" alt="Image">
                     <h1 class="mt-2">TAMILSELVAN K</h1>
                     <div class="mb-4" style="height: 22px;">
                         <h4 class="typed-text-output d-inline-block text-body"></h4>
@@ -253,15 +265,16 @@
                                 <div id="success"></div>
                                 <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                     <div class="form-row">
-                                        <div class="control-group col-sm-6">
+                                        <div class="control-group col-sm-6"><label id="text1" style=" visibility:hidden"padding-bottom="0px">Invalid Email ID</label>
                                             <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
                                                 required="required" data-validation-required-message="Please enter your name" />
                                             <p class="help-block text-danger"></p>
                                         </div>
-                                        <div class="control-group col-sm-6">
-                                            <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                                required="required" data-validation-required-message="Please enter your email" />
-                                            <p class="help-block text-danger"></p>
+                                        <div class="control-group col-sm-6"><label id="text2" style=" visibility:hidden"padding-bottom="0px">Invalid Email ID</label>
+                                            <input type="email" class="form-control p-4 valid" id="email" placeholder="Your Email"  
+                                                required="required" data-validation-required-message="Please enter your email"  required/>
+                                                
+                                                <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="control-group">
@@ -276,14 +289,26 @@
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div>
-                                        <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send Message</button>
+                                        <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton" onclick="sendMail()" >Send Message</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
+            
+
+                
+                <script type="text/javascript">
+                    
+                   
+                </script>
                 <!-- Contact End -->
+             
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+                </script>
+                
+               
                 
                 
                 <!-- Footer Start -->
@@ -319,7 +344,7 @@
         <script>
             function downloadCV() {
                 const link = document.createElement('a');
-                link.href = "img/Resume.pdf";
+                link.href = "D:/Internship/CodeAlpha_frontend/codealpha_portfolio/img/Resume.pdf";
                 link.download = 'Resume.pdf'; // Optional: specify a name for the downloaded file
                 document.body.appendChild(link); // Append the link to the document
                 link.click(); // Simulate a click to trigger the download
@@ -338,7 +363,7 @@
 
         <!-- Contact Javascript File -->
         <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+    
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
